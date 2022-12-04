@@ -31,12 +31,24 @@ hr {
     background-color: #9FD8CB;
 }
 
-section {
-    background-color: #d6e5e3;
-    border-color: #517664;
-    border-width: 20px;
+/* section {
+    
     margin: 15%;
     font-size: 150%;
+}
+
+div {
+    display: block;
 
 }
+
+button {
+    background-color: #d6e5e3;
+    padding: 8px;
+    color: #517664;
+    font-weight: 800;
+    font-size: 120%;
+    transition: ease 50ms;
+} */
+
 
