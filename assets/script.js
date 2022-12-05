@@ -3,6 +3,7 @@
 var containers = document.querySelectorAll(".container");
 var timer = document.getElementById("timer");
 var opener = document.getElementById("opener");
+var closer = document.getElementById("closer");
 var cursor = 0;
 var secondsLeft = 60;
 
@@ -11,6 +12,16 @@ opener.addEventListener("click", function() {
     startTimer();
     nextQuestion();
 })
+
+// closer.addEventListener("click", function () {
+//     topScores();
+// })
+
+// var topScores = function() {
+//     if (containers[5]) {
+//         containers.style.display = "none";
+//     }
+// }
 
 var countDown = function() {
     var tickTock = " seconds";
@@ -31,6 +42,7 @@ var startTimer = function() {
         if (secondsLeft === 0) {
             clearInterval(clockTimer);
             //run form page for highscores
+            
         }
 
     }, 1000)
@@ -62,13 +74,14 @@ var nextQuestion = function(event) {
         } 
     } else {
         secondsLeft = secondsLeft - 5;
-    };
+    }
 
         
     showQuestions();
-    // startTimer();
 }
 }
+
+
 
 
 document.addEventListener("click", nextQuestion);

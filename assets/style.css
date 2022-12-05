@@ -15,7 +15,7 @@ header {
     padding: 20px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: baseline;
     color: #517664;
     font-weight: 600;
     font-size: 120%;
@@ -32,14 +32,30 @@ hr {
 }
 
 section {
-    
-    margin: 15%;
+    margin: 8%;
     font-size: 150%;
+    box-shadow: 4px 4px 100px #D6E5E3;
+    padding-bottom: 8px;
+    margin-bottom: 4px;
+}
+
+section:hover {
+    transform: scale(101%);
+    box-shadow: 4px 4px 100px #8daca8;
+}
+
+h2 {
+    text-align: center;
+    border-width: 4px;
+    color: #2D3319;
 }
 
 div {
-    display: block;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 8px;
 }
 
 button {
@@ -49,7 +65,14 @@ button {
     font-weight: 800;
     font-size: 120%;
     transition: ease 50ms;
+    margin: 12px;
 }
+
+button:hover {
+    transform: scale(101%);
+    background-color: #d1ece9;
+}
+
 
 
 
