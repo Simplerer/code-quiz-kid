@@ -2,9 +2,15 @@
 // var topScores = document.querySelector("#topscores");
 var containers = document.querySelectorAll(".container");
 var timer = document.getElementById("timer");
+var opener = document.getElementById("opener");
 var cursor = 0;
 var secondsLeft = 60;
 
+
+opener.addEventListener("click", function() {
+    startTimer();
+    nextQuestion();
+})
 
 var countDown = function() {
     var tickTock = " seconds";
@@ -45,6 +51,7 @@ var showQuestions = function() {
 
 var nextQuestion = function(event) {
     var element = event.target;
+    event.stopPropagation();
     
     if (element.matches(".container button"))  {
         var dataAnswer = element.getAttribute("data-name");
@@ -53,18 +60,19 @@ var nextQuestion = function(event) {
         if (cursor < containers.length - 1) {
             cursor++;
         } 
+    } else {
+        secondsLeft = secondsLeft - 5;
+    };
 
-        if (cursor > 0 && cursor < 2) {
-            startTimer();
-        }
-    }
+        
     showQuestions();
     // startTimer();
 }
 }
 
 
-document.addEventListener('click', nextQuestion);
+document.addEventListener("click", nextQuestion);
+
 showQuestions();
 
 
