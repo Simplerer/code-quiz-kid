@@ -1,5 +1,5 @@
 
-// var topScores = document.querySelector("#topscores");
+var topScores = document.querySelector("#topscores");
 var containers = document.querySelectorAll(".container");
 var timer = document.getElementById("timer");
 var opener = document.getElementById("opener");
@@ -13,15 +13,11 @@ opener.addEventListener("click", function() {
     nextQuestion();
 })
 
-// closer.addEventListener("click", function () {
-//     topScores();
-// })
-
-// var topScores = function() {
-//     if (containers[5]) {
-//         containers.style.display = "none";
-//     }
+// topScores.addEventListener("click", function() {
+//     containers.dataset.index = "6";
 // }
+// )
+
 
 var countDown = function() {
     var tickTock = " seconds";

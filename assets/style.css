@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* Color Palette (https://coolors.co/palette/cacfd6-d6e5e3-9fd8cb-517664-2d3319) */
+
 body {
     width: 85%;
     display: flex;
@@ -23,6 +25,13 @@ header {
 
 header a {
     color: inherit;
+    font-size: 130%;
+    
+}
+
+p {
+    font-size: 150%;
+    color: #2D3319;
 }
 
 hr {
@@ -73,6 +82,15 @@ button:hover {
     background-color: #d1ece9;
 }
 
+#bigbutton {
+    margin-top: 28px;
+    padding: 40px;
+    font-size: 140%;
+}
+
+#opener {
+    margin: 40px
+}
 
 
 
