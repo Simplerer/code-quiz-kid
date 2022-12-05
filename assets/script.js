@@ -4,19 +4,20 @@ var containers = document.querySelectorAll(".container");
 var timer = document.getElementById("timer");
 var opener = document.getElementById("opener");
 var closer = document.getElementById("closer");
+var stopTimer = document.getElementById("stopTimer");
 var cursor = 0;
 var secondsLeft = 60;
+var timerInterval;
 
 
 opener.addEventListener("click", function() {
     startTimer();
-    nextQuestion();
+    showQuestions();
 })
 
-// topScores.addEventListener("click", function() {
-//     containers.dataset.index = "6";
-// }
-// )
+var Scoring = function() {
+    
+}
 
 
 var countDown = function() {
@@ -31,19 +32,19 @@ var countDown = function() {
 var startTimer = function() {
     countDown();
         
-    var clockTimer = setInterval(function() {
+    timerInterval = setInterval(function() {
         secondsLeft--;
         countDown();
 
         if (secondsLeft === 0) {
-            clearInterval(clockTimer);
+            clearInterval(timerInterval);
+            timer.textContent = "Out of Time!";
             //run form page for highscores
             
         }
 
     }, 1000)
 
-    nextQuestion();
 }
 var showQuestions = function() {
     for (var item of containers) {
@@ -68,13 +69,15 @@ var nextQuestion = function(event) {
         if (cursor < containers.length - 1) {
             cursor++;
         } 
-    } else {
+        } else if (dataAnswer === "done") {
+            Scoring();
+        }    else {
         secondsLeft = secondsLeft - 5;
-    }
+        }
 
         
-    showQuestions();
-}
+        showQuestions();
+    }
 }
 
 
