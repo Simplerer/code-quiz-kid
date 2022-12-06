@@ -1,1 +1,1 @@
-# code-quiz-kid
+# Code-Quiz-Kid

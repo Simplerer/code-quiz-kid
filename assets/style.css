@@ -109,6 +109,27 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 200%;
+    font-size: 150%;
+}
+
+#final {
+    font-size: 120%;
+    border: solid #2A9D8F;
+    padding: 2px 40px;
+    background-color: #D6E5E3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#final h2, p, span {
+    background-color: #D6E5E3;
+}
+
+#signup {
+    font-size: 150%;
+    margin: auto;
+    align-items: center;
 }
 
