@@ -37,7 +37,8 @@ var countDown = function() {
             if (secondsLeft === 0) {
                 clearInterval(timerInterval);
                 timer.textContent = "Out of Time!";
-                //run form page for highscores
+                scoredTime = 0;
+                Scoring();
                 
             }
             
@@ -68,6 +69,7 @@ var nextQuestion = function(event) {
                 cursor++;
             } 
         } else if (dataAnswer === "done") {
+            cursor++;
             scoredTime = secondsLeft;
             console.log(scoredTime);
             Scoring();
@@ -82,9 +84,13 @@ var nextQuestion = function(event) {
 
 var Scoring = function() {
     clearInterval(timerInterval)
-    console.log(scoredTime);
     localStorage.setItem("timeScore", scoredTime);
+}
 
+var initialSubmit = function(event) {
+    event.preventDefault();
+    var initials = document.getElementById("initials").value;
+    localStorage.setItem("ititials", initials);
 }
 
 
