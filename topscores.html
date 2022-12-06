@@ -8,17 +8,42 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <header>
+    <header id="secondheader">
+        <h1>Quiz Masters</h1>
         <a href="/index.html">Back to the Game!</a>
-        <h1>Be the next Coding Quiz Kid!</h1>
-        
     </header> 
-    <div>
-        <p>Best Times!</p>
+        
+    <div id="scoretable">
+        <header>
+            <h2>Best Times</h2>
+        </header>
+        <ul></ul>
+
     </div>
     
    
     
-    <script src="./assets/script.js"></script>
+   <script>
+    var postScoreBtn = document.getElementById("button");
+    scoreReveal();
+    
+    var scoreReveal = function () {
+        initialWinner.textContent = localStorage.getItem("initials");
+        timeCompleted.textContent = localStorage.getItem("timeScore");
+        //these will be the posted scores
+    }
+    
+    postScoreBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        
+        var initialInput = document.getElementById("initials").value;
+        var scoreInput = document.getElementById("score").value;
+        if (initialInput !== "") {
+            localStorage.setItem("initials", initialInput);
+            scoreReveal();
+        }
+        
+    })
+   </script>
 </body>
 </html>

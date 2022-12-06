@@ -6,7 +6,6 @@ var opener = document.getElementById("bigbutton");
 var closer = document.getElementById("closer");
 var stopTimer = document.getElementById("stopTimer");
 var initials = document.getElementById("initials");
-var clickMe = document.getElementById("clickMe");
 var cursor = 0;
 var secondsLeft = 60;
 var timerInterval;
@@ -34,8 +33,10 @@ var startTimer = function() {
             
             if (secondsLeft === 0) {
                 clearInterval(timerInterval);
-                timer.textContent = "Out of Time!";
+                timer.textContent = "Game Over!";
                 scoredTime = 0;
+                cursor = 6;
+                showQuestions();
                 Scoring();
                 
             }
@@ -71,8 +72,9 @@ var nextQuestion = function(event) {
             scoredTime = secondsLeft;
             console.log(scoredTime);
             Scoring();
-        }else {
+        }else { if (secondsLeft > 6) {
             secondsLeft = secondsLeft - 5;
+        }
         }
         
         

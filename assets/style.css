@@ -41,7 +41,7 @@ hr {
 }
 
 section {
-    margin: 8%;
+    margin: 4%;
     font-size: 150%;
     box-shadow: 4px 4px 100px #D6E5E3;
     padding-bottom: 8px;
@@ -92,5 +92,23 @@ button:hover {
     margin: 40px
 }
 
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+#clickMe {
+    margin: auto;
+    padding: 8px;
+    background-color: #d6e5e3;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+#secondheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 200%;
+}
 
