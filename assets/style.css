@@ -29,9 +29,10 @@ header a {
     
 }
 
-p {
+header p {
     font-size: 150%;
     color: #2D3319;
+    background-color: #cacfd6
 }
 
 hr {
@@ -116,16 +117,12 @@ article {
     font-size: 120%;
     border: solid #2A9D8F;
     padding: 2px 40px;
-    background-color: #D6E5E3;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
 
-#final h2, p, span {
-    background-color: #D6E5E3;
-}
 
 #signup {
     font-size: 150%;
