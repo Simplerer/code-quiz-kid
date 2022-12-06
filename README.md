@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Description](#description)
-- [A Glimpse](#aglimpse)
+- [A Glimpse](#a-glimpse)
 - [Entry](#entry)
 
 
@@ -15,4 +15,4 @@ Here is a quiz meant to challenge a newer student of JavaScript and perhaps prov
 
 ## Entry
 
-[No Ticket Needed!]()
+[No Ticket Needed!](https://simplerer.github.io/code-quiz-kid/)
