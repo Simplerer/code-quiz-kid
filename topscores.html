@@ -17,7 +17,22 @@
         <header>
             <h2>Best Times</h2>
         </header>
-        <ul></ul>
+        <div>
+            <p>Player: <span id="iWin"></span></p>
+            <p>Leftover Time: <span id="myTime"></span></p>
+        </div>
+
+        <form method="POST">
+            <div>
+              <label for="name">Quiz Kid</label>
+              <input type="text" name="name" id="initials" placeholder="Your Initials Please" />
+            </div>
+            <!-- <div>
+              <label for="score">Time Remaining</label>
+              <input type="text" name="score" id="score" placeholder="" />
+            </div> -->
+            <button id="button">Sign Up</button>
+          </form>
 
     </div>
     
@@ -25,7 +40,9 @@
     
    <script>
     var postScoreBtn = document.getElementById("button");
-    scoreReveal();
+    var initialWinner = document.getElementById("iWin");
+    var timeCompleted = document.getElementById("myTime");
+    
     
     var scoreReveal = function () {
         initialWinner.textContent = localStorage.getItem("initials");
@@ -37,13 +54,17 @@
         event.preventDefault();
         
         var initialInput = document.getElementById("initials").value;
-        var scoreInput = document.getElementById("score").value;
+        // var scoreInput = document.getElementById("score").value;
         if (initialInput !== "") {
             localStorage.setItem("initials", initialInput);
+            // localStorage.setItem("timeScore", scoreInput);
+            console.log(initialInput);
+            // console.log(scoreInput);
             scoreReveal();
         }
         
     })
+    scoreReveal();
    </script>
 </body>
 </html>
