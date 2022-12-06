@@ -2,32 +2,30 @@
 var topScores = document.querySelector("#topscores");
 var containers = document.querySelectorAll(".container");
 var timer = document.getElementById("timer");
-var opener = document.getElementById("opener");
+var opener = document.getElementById("bigbutton");
 var closer = document.getElementById("closer");
 var stopTimer = document.getElementById("stopTimer");
+var initials = document.getElementById("initials");
+var clickMe = document.getElementById("clickMe");
 var cursor = 0;
 var secondsLeft = 60;
 var timerInterval;
 var scoredTime;
 
 
-opener.addEventListener("click", function() {
-    startTimer();
-    showQuestions();
-})
 
 var countDown = function() {
     var tickTock = " seconds";
-
+    
     
     if (secondsLeft === 1) {
-            tickTock = " second";
+        tickTock = " second";
         }
         timer.textContent = secondsLeft + tickTock;
         
     }
     
-    var startTimer = function() {
+var startTimer = function() {
         countDown();
         
         timerInterval = setInterval(function() {
@@ -45,7 +43,7 @@ var countDown = function() {
         }, 1000)
         
     }
-    var showQuestions = function() {
+var showQuestions = function() {
     for (var item of containers) {
         
         if (item.dataset.index != cursor) {
@@ -87,13 +85,11 @@ var Scoring = function() {
     localStorage.setItem("timeScore", scoredTime);
 }
 
-var initialSubmit = function(event) {
-    event.preventDefault();
-    var initials = document.getElementById("initials").value;
-    localStorage.setItem("ititials", initials);
-}
 
-
+opener.addEventListener("click", function() {
+    startTimer();
+    showQuestions();
+})
 
 document.addEventListener("click", nextQuestion);
 
